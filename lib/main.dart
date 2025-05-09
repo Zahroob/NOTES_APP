@@ -19,7 +19,6 @@ class NotsApp extends StatelessWidget {
         // Loginpage.id: (context) => Loginpage(),
       },
       debugShowCheckedModeBanner: false,
-     
       home: const NotesView(),
     );
   }
