@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField(
       {super.key,
@@ -16,23 +17,20 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
-      child: TextFormField(
-        maxLines: maxLines,
-        maxLength: maxLength,
-        decoration: InputDecoration(
-          hintText: hintText,
-          suffixIcon: suffixIcon,
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-            ),
+    return TextFormField(
+      maxLines: maxLines,
+      maxLength: maxLength,
+      decoration: InputDecoration(
+        hintText: hintText,
+        suffixIcon: suffixIcon,
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.white,
           ),
-          border: const OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-            ),
+        ),
+        border: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.white,
           ),
         ),
       ),
