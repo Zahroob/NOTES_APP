@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:notes_app/Views/view_notes.dart';
+import 'package:notes_app/constants.dart';
 
-void main() {
-  runApp(const NotsApp());
+void main() async {
+  await Hive.initFlutter();
+ await Hive.openBox(kNotesBox);
+  return runApp(const NotsApp());
 }
 
 class NotsApp extends StatelessWidget {
@@ -19,7 +24,7 @@ class NotsApp extends StatelessWidget {
         // Loginpage.id: (context) => Loginpage(),
       },
       debugShowCheckedModeBanner: false,
-      home:  const NotesView(),
+      home: const NotesView(),
     );
   }
 }
