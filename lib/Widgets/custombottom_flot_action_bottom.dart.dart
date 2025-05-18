@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// تجاهل: يجب أن يكون غير قابل للتغيير
+// ignore: must_be_immutable
 class CustomButtom extends StatelessWidget {
   CustomButtom({super.key , this.onTap});
   void Function()? onTap;

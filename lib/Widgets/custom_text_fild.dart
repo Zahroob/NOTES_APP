@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CustomTextFormField extends StatelessWidget {
-  CustomTextFormField({
-    super.key,
-    this.hintText,
-    this.suffixIcon,
-    this.maxLength,
-    this.maxLines,
-    this.onSaved,
-  });
-  String? hintText;
-  Icon? suffixIcon;
+  CustomTextFormField(
+      {super.key,
+      this.hintText,
+      this.suffixIcon,
+      this.maxLength,
+      this.maxLines,
+      this.onSaved});
   // int? height;
   // int? width;
+  String? hintText;
+  Icon? suffixIcon;
   int? maxLength;
   int? maxLines;
   final void Function(String?)? onSaved;

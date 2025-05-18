@@ -30,6 +30,7 @@ class _AddNoteFromState extends State<AddNoteFrom> {
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   String? title, subTitle;
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -55,7 +56,7 @@ class _AddNoteFromState extends State<AddNoteFrom> {
             suffixIcon: const Icon(Icons.subject),
           ),
           const SizedBox(height: 32),
-           CustomButtom(
+          CustomButtom(
             onTap: () {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
@@ -65,7 +66,7 @@ class _AddNoteFromState extends State<AddNoteFrom> {
                 setState(() {});
               }
             },
-           ),
+          ),
           const SizedBox(height: 16)
         ],
       ),
